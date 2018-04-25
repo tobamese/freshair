@@ -1,0 +1,18 @@
+name = "FreshAir-Theme"
+license = ""
+licenselink = ""
+description = "A simple Hugo theme built on bootie-docs for Documentation"
+homepage = ""
+tags = ["documentation", "bootstrap", "simple", "highlight.js"]
+features = ["documentation", ""]
+min_version = 0.15
+
+[author]
+  name = "AKQA"
+  homepage = ""
+
+# If porting an existing theme
+[original]
+  name = "hugo-bootie-docs-theme"
+  homepage = "http://progrhyme.github.io/bootie-docs-demo/"
+  repo = "https://github.com/progrhyme/hugo-theme-bootie-docs/"

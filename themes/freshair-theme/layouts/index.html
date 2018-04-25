@@ -1,0 +1,71 @@
+{{ $baseUrl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+<main role="main">
+
+<div class="row hero nudge-top">
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="container">
+		<div class="jumbotron">
+		<h1>{{ .Site.Title }}</h1>
+		<p>{{ with .Site.Params.description }}{{ . }}{{ else }}You can customize this text by params "description" in your <code>config.toml</code>.{{ end }}</p>
+		<a class="btn btn-primary" href="{{ $baseUrl }}/get-started/index.html">Get Started</a>
+	</div>
+</div>
+</div>
+
+{{ range where .Site.Pages "Title" "_index" }}
+	<div class="row doc-main">
+		<p class="doc-entry-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></p>
+		{{ .Content }}
+	</div>
+{{ end }}
+
+<div class='container'>
+<div class="flex-row space-top5 keyline-bottom">
+	<div class='flex-item home desc'>
+		<h5 class="home">Digital</h5>
+		<h1>Styleguide</h1>
+		<p class='intro'>Fresh Air  is the design system for Delta digital products. It is a series of individual styles, components, and guidelines used for creating consistent, beautiful interfaces that are a pleasure to use.   </p>
+	</div>
+	<div class='flex-item home list '>
+		<ul class="">
+			<li>Color</li>
+			<li>Typography</li>
+			<li>Icons</li>
+			<li>Photography</li>
+			<li>Page Types</li>
+			<li>Components</li>
+			<li>Layout & Grid</li>
+		</ul>
+	</div>
+
+</div>
+<div class="flex-row space-top5 space-bottom5">
+	<div class='flex-item home desc'>
+		<h5 class="home">Discover</h5>
+		<h1>Additional Resources</h1>
+		<p class='intro'>A collection of the  best tools and guidelines for all the different pieces of Delta digital product development.</p>
+	</div>
+	<div class='flex-item home list'>
+		<ul>
+			<li>Usage Instructions</li>
+			<li>Writing Guidelines</li>
+			<li>DSM Component Library</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+{{ $title := .Site.Title }}
+{{ with .Site.Params.withSitePosts }}
+<hr />
+
+<div class="row doc-main text-center">
+	<a href="{{ $baseUrl }}/post">See posts for {{ $title }}</a>
+</div>
+{{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}

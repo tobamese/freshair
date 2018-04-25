@@ -1,0 +1,45 @@
+baseURL = "http://delta.dc.akqa.com/styleguide/"
+languageCode = "en-us"
+# rerouting directory for static files
+publishDir = "../dist"
+#fix relative urls
+canonifyURLs = false
+title = "Fresh Air"
+theme = "freshair-theme"
+
+[params]
+  description = "Design system for Delta Digital Products"
+
+[[menu.main]]
+  name = "Get Started"
+  url  = "/get-started/index.html"
+  weight = 100
+
+[[menu.main]]
+  name = "Design Principles"
+  url  = "/principles/index.html"
+  weight = 200
+[[menu.main]]
+  name = "Style"
+  url  = "/style/index.html"
+  weight = 300
+
+[[menu.main]]
+  name = "Components"
+  url  = ""
+  weight = 400
+
+[[menu.main]]
+  name = "Writing"
+  url  = "/writing/index.html"
+  weight = 500
+
+[[menu.main]]
+  name = "Accessibility"
+  url  = ""
+  weight = 600
+
+[[menu.main]]
+  name = "Resources"
+  url  = ""
+  weight = 700

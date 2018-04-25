@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Ensure Proper Usage
+if [ $# != 1 ]; then
+    echo "Usage: deploy [dev|stage|uat|prod]";
+    exit 1;
+fi
+
+
+# Configure script
+root="../../"
+server="10.3.30.135"
+user="administrator"
+app="freshair"
+
+
+# Configure destination
+if [ $1 = "dev" ]; then
+    destination="/usr/share/nginx/html/dev/delta.atl.akqa.com/$app"
+elif [ $1 = "stage" ]; then
+    destination="/usr/share/nginx/html/stage/delta.atl.akqa.com/$app"
+elif [ $1 = "uat" ]; then
+    destination="/usr/share/nginx/html/uat/delta.atl.akqa.com/$app"
+elif [ $1 = "prod" ]; then
+    destination="/usr/share/nginx/html/prod/delta.atl.akqa.com/$app"
+fi
+
+
+# Start in root of repository
+cd $root
+
+
+# Install Node Dependencies
+#npm install
+
+
+# Compile Source Code
+#npm run production
+
+
+# Deploy the application
+rsync -avz --delete --exclude-from=devops/deploy/rsync_exclude.txt dist/ $user@$server:$destination

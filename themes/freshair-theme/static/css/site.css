@@ -1,0 +1,564 @@
+/*
+ * You can add styles to customize UI for your own site
+ * into CSS file: static/css/site.css
+ */
+ /*
+  * You can add styles to customize UI for your own site
+  * into CSS file: static/css/site.css
+  */
+
+  /*
+    Oh Hello!
+    These funky guys are just some CSS variables. No preprocessor needed for your color variables.
+  */
+  :root {
+    --navy: #091426;
+    --business: #273246;
+    --red: #E51937;
+    --black: #333;
+    --gray: #DEDFE1;
+    --ltgray: #F5F7FA;
+    --mattegray:#DEDFE1;
+    --darkblue: #0B1F66;
+    --blue: #4470C3;
+    --dkgray: #7C828A;
+    --silver:#999;
+    --gold:#C78A22;
+    --platinum:#8E86A4;
+    --diamond:#6FA4CA;
+  }
+
+/* Utilities */
+.block{display:block;}
+.space-top{margin-top: 3em;}
+.space-top0{margin-top: 1em;}
+.space-top5{margin-top: 5em;}
+.space-bottom{margin-bottom: 3em;}
+.space-bottom0{margin-bottom: 1em;}
+.space-right{margin-right: 3em;}
+.space-right0{margin-right: 1em;}
+.keyline-all{border: var(--ltgray) 1px solid;}
+.keyline-left{border-left: var(--ltgray) 1px solid;}
+.keyline-right{border-right: var(--ltgray) 1px solid;}
+.keyline-top{border-top: var(--ltgray) 1px solid;}
+.keyline-bottom{border-bottom: var(--ltgray) 1px solid;}
+.nudge-top{margin-top:-3em;}
+
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Whitney', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--darkblue);
+  }
+
+  hr{
+    color: var(--gray);
+    background-color: var(--gray);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+ .h1,
+ .h2,
+ .h3,
+ .h4,
+ .h5,
+ .h6
+   {
+    /* margin: 0 0 5px 0; */
+    font-family: 'Whitney';
+    color: var(--darkblue);
+  }
+
+  h1{
+    font-weight: 100;
+    font-size:52px;
+    line-height:78px;
+  }
+
+  h2{
+  font-weight:200;
+  font-size: 36px;
+  line-height: 72px;
+  }
+
+h3, .h3{
+  font-size: 28px;
+  font-weight: 100;
+}
+
+h4{
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 30px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+  h5{
+    text-transform: uppercase;
+  }
+
+h5.home{
+  font-weight:600;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  line-height: 15px;
+  margin: 15px 0 -5px 0;
+}
+
+  p.intro{
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  p{
+    font-weight: 300;
+    line-height: 30px;
+
+  }
+
+  h1:after{
+    content: '';
+    display:block;
+    border-bottom: 3px solid var(--red);
+    width: 80px;
+  }
+
+  h1:after{height:30px;}
+  h2:after{height:24px;}
+
+ b, strong{font-weight: 400;}
+  a{
+    color:var(--blue);
+    font-weight:400;
+  }
+
+main ul > li {
+  padding-bottom: 15px;
+}
+main ol > li {
+  padding-bottom: 15px;
+}
+
+main ul > li::before,ol > li::before {
+  content: '\2001';
+}
+
+
+
+
+
+/* TODO:fix this */
+body{
+  margin-bottom:275px;
+  font-size: 18px;
+  color: var(--darkblue);
+}
+
+.light{font-weight: 100;}
+.book{font-weight: 300;}
+.bold{font-weight: 600;}
+.semibold{font-weight: 400;}
+
+  .doc-entry-meta{
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+
+  }
+
+ /* TAbles */
+ /* Tables */
+ main > article > section > table {
+   border: 1px solid var(--mattegray);
+   width: 100%;
+   max-width: 100%;
+   margin-bottom: 20px;
+ }
+
+ main > article > section > table > thead > tr > th,
+ main > article > section > table > tbody > tr > th,
+ main > article > section > table > tfoot > tr > th,
+ main > article > section > table > thead > tr > td,
+ main > article > section > table > tbody > tr > td,
+ main > article > section > table > tfoot > tr > td {
+   padding: 8px;
+   font-size: 18px;
+   line-height: 1.4;
+   vertical-align: top;
+   border-top: 1px solid var(--mattegray);
+ }
+
+ main > article > section > table > thead > tr > th {
+   vertical-align: bottom;
+   border-bottom: 2px solid var(--mattegray);
+ }
+
+ main > article > section > table > caption + thead > tr:first-child > th,
+ main > article > section > table > colgroup + thead > tr:first-child > th,
+ main > article > section > table > thead:first-child > tr:first-child > th,
+ main > article > section > table > caption + thead > tr:first-child > td,
+ main > article > section > table > colgroup + thead > tr:first-child > td,
+ main > article > section > table > thead:first-child > tr:first-child > td {
+   border-top: 0;
+ }
+ main > article > section > table > tbody + tbody {
+   border-top: 2px solid var(--mattegray);
+ }
+
+ main > article > section > table > thead > tr > th,
+ main > article > section > table > tbody > tr > th,
+ main > article > section > table > tfoot > tr > th,
+ main > article > section > table > thead > tr > td,
+ main > article > section > table > tbody > tr > td,
+ main > article > section > table > tfoot > tr > td {
+   border: 1px solid var(--mattegray);
+ }
+ main > article > section > table > thead > tr > th,
+ main > article > section > table > thead > tr > td {
+   border-bottom-width: 2px;
+ }
+ main > article > section > table > tbody > tr:nth-of-type(odd) {
+   background-color: var(--ltgray);
+ }
+
+ main > article > section > table.plain > tbody > tr:nth-of-type(odd) {
+   background-color: white;
+ }
+
+  /* Yo, I got some nav styles here for ya - forgive all the repetition. bootstrap is a pain to override*/
+.navbar-nav{float:right;}
+ .navbar-inverse{
+    background-color: var(--navy);
+    background-image: none;
+    padding-top: 10px;
+  }
+
+  ul.nav.navbar-nav{
+    font-family: Whitney;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1.3px;
+  }
+
+ .navbar-inverse .navbar-nav > li > a{
+   color: white;
+   padding-bottom:30px;/*border bottom + padding 27px = 30*/
+ }
+ .navbar-inverse .navbar-nav > li > a:hover{
+   background: var(--navy);
+   opacity: .8;
+ }
+ .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover{
+   background: var(--navy);
+   border-bottom: 3px var(--red) solid;
+   padding-bottom:27px;
+ }
+
+/* Coming soon nav style */
+ .navbar-inverse .navbar-nav > li:nth-of-type(4) > a,.navbar-inverse .navbar-nav > li:nth-of-type(6) > a,.navbar-inverse .navbar-nav > li:nth-of-type(7) > a{
+    opacity: .3;
+    cursor:default;
+ }
+
+@media (max-width:1185px) {
+  .navbar-inverse .navbar-nav > li:nth-of-type(4) > a,.navbar-inverse .navbar-nav > li:nth-of-type(6) > a,.navbar-inverse .navbar-nav > li:nth-of-type(7){
+    display: none;
+  }
+}
+
+/* Layouts */
+.doc-main{
+  margin-top: 4em;
+}
+
+
+
+.flex-row{
+  display: flex;
+  align-items: stretch;
+  padding-bottom: 36px;
+}
+
+.flex-item.desc{
+  width: calc(100% / 12 * 7 - 3px);
+}
+.flex-item:first-of-type{
+  padding-right: 36px;
+}
+.desc > p{
+  max-width: 500px;
+}
+
+.list:before{
+  content: '';
+  border-right: 1px solid var(--ltgray);
+  height: 130px;
+  display: inline-block;
+  position: relative;
+  top:100px;
+}
+.flex-item.list{
+  align-self: end;
+}
+
+.list > ul{
+  display: flex;
+  flex-flow: wrap column;
+  max-height: 130px;
+  position: relative;
+  bottom:30px;
+  margin-left: 36px;
+}
+.list > ul > li{
+  list-style: none;
+  line-height: 28px;
+  width: 200px;
+}
+
+ /* Sidebar modules for boxing content */
+ .sidebar-toc ul{
+   padding-left: 0;
+   width: 100%;
+ }
+ .sidebar-toc ul li {
+   list-style-type: none;
+   padding: 28px 0;
+   border-bottom: 1px var(--gray) solid;
+   font-weight: 600;
+   letter-spacing: .65px;
+   width: 18rem;
+ }
+ /* .sidebar-toc ul{
+ padding-left: 0;
+ } */
+
+ .sidebar-toc ul li:last-of-type {
+   border-bottom: none;
+ }
+ /* @media (min-width:768px) {
+   .sidebar-toc ul li {
+     width: 10rem;
+   }
+ } */
+ @media (min-width:1200px) {
+   .sidebar-toc ul li {
+
+   }
+ }
+
+ .sidebar-toc ul li > a{
+ color: var(--darkblue);
+ font-weight: 600;
+ padding: 3px 30px 3px 0;
+ overflow: hidden;
+ }
+
+ .sidebar-toc ul li > a:hover,.sidebar-toc ul li.active > a{
+   text-decoration: none;
+ }
+
+ /* Actual content stuff */
+ .doc-entry-meta{
+   float:right;
+   color:var(--gray);
+ }
+/*Design Principles*/
+
+.principle{
+  display: inline-block;
+  width: calc(100% / 12 * 10);
+}
+
+.principle > b {
+  display: inline-block;
+  padding-right: 30px;
+}
+.principle > h4{
+  font-weight: 100;
+  font-size: 52px;
+  margin-top: 0;
+}
+.counter{
+  display: inline-block;
+  width: 65px;
+  color: var(--red);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.example{
+  font-weight: 600;
+  display: inline-block;
+  width: 82px;
+}
+/* Styles page */
+.styles{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.primary > span{
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+}
+.background > span{
+  display: block;
+  flex-grow: 1;
+  height: 3em;
+}
+.navy > span{background: var(--navy);}
+.red > span{background: var(--red);}
+.blue > span{background: var(--blue);}
+.gray > span{background: var(--gray);}
+.ltgray > span{background: var(--ltgray);}
+.darkblue > span{background: var(--darkblue);}
+.mattegray > span{background: var(--mattegray);}
+.dkgray > span{background: var(--dkgray);}
+.white > span{background: white;}
+.diamond > span{background: var(--diamond);}
+.platinum > span{background: var(--platinum);}
+.silver > span{background: var(--silver);}
+.gold > span{background: var(--gold);}
+
+.primary{
+  text-align: center;
+}
+.background{flex-grow: 1;}
+
+.type-item{
+text-align: center;
+}
+
+.type-item > span{
+  display: block;
+  font-size: 4em;
+}
+
+.typesample{
+  font-size: 2em;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  line-height: 2em;
+  color: var(--darkblue);
+}
+ /*Icons*/
+ .icons{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-start;
+   margin-bottom: 30px;
+ }
+ .icon{
+   width: 120px;
+   height: 120px;
+   border: var(--gray) 1px solid;
+   text-align: center;
+   margin-top: 10px;
+   padding-top: 35px;
+   margin: 5px;
+ }
+
+ .icon > [class^="icon-"], .icon > [class*=" icon-"]{
+   font-size: 1.5em;
+   color:var(--darkblue);
+ }
+ /* .icon:hover{
+   background: var(--ltgray);
+ } */
+
+
+.hero{
+  background: url('../img/freshair-banner.jpg') no-repeat center center;
+  background-size:cover;
+  height: 771px;
+  background-position: center bottom;
+}
+
+.jumbotron{
+  background: none;
+  color: white;
+  position: relative;
+  top:30vh;
+}
+
+
+/* .jumbotron:before{
+  content: url('../img/supergraphic.svg');
+  display: table;
+  transform: rotate(57deg);
+  position: relative;
+  right:200px;
+} */
+
+/* @media (max-width:768px) {
+  .jumbotron:before{
+    content: url('../img/supergraphic.svg');
+    display: table;
+    transform: rotate(57deg);
+    position: fixed;
+    left:-17px;
+    top:75px;
+  }
+
+} */
+
+.jumbotron > h1{
+  font-family: 'Whitney Condensed';
+  font-size: 65px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 15px;
+}
+.jumbotron > h1:after{
+  border:none;
+}
+
+.jumbotron > p{
+  font-family: 'Whitney Condensed';
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+/* buttons */
+.btn.btn-primary{
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  font-size: 14px;
+  border-radius: 0px;
+  border: none;
+  text-transform:uppercase;
+  background: var(--red);
+  padding:16px 36px;
+}
+
+
+@media (max-width: 768px) {
+.col-sm-3.doc-sidebar{
+    display: none;
+  }
+}
