@@ -1,0 +1,38 @@
+---
+pages:
+- writing.md
+- style.md
+- image-optimization.md
+- homepage.md
+- get-started.md
+- principles.md
+- delivery.md
+- accessibility.md
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: 
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: ''
+- name: draft
+  label: Draft
+  type: boolean
+  hidden: false
+  default: true
